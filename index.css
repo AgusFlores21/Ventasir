@@ -1,0 +1,222 @@
+/* Reset de estilos para garantizar consistencia entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos base */
+body {
+    background-color: #333;
+    color: #ddd;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6; /* Añadido: Espaciado entre líneas */
+}
+
+img {
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* Primera sección */
+section:first-of-type {
+    background-color: #555;
+    padding: 50px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ddd;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px; /* Añadido: Espaciado después del título */
+}
+
+header nav {
+    display: inline-block;
+}
+
+ul {
+    font-family: 'Raleway', sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    font-family: 'Raleway', sans-serif;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #9c9c9c;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #bbb;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    color: #aaa;
+    margin-bottom: 20px; /* Añadido: Espaciado después de los párrafos */
+}
+
+/* Secciones después de la primera */
+section:not(:first-of-type) {
+    background-color: #444;
+    padding: 30px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #bbb;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul,
+ol {
+    margin-bottom: 20px;
+}
+
+/* Botón de regreso arriba */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#myBtn:hover {
+    background-color: #555;
+}
+
+/* Grid de productos destacados */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    background-color: #333;
+    padding: 20px;
+}
+
+.box {
+    background-color: #444;
+    text-align: center;
+    padding: 20px;
+}
+
+.box img {
+    max-width: 85%;
+    height: auto;
+}
+
+.box h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 24px;
+    color: #ddd;
+}
+
+.box p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #aaa;
+}
+
+.box button {
+    display: block;
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Ajustes para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+    .grid-container {
+        display: block;
+    }
+    .box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #myBtn {
+        font-size: 12px;
+        padding: 8px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+/* Ajustes para dispositivos con pantalla más grande */
+@media only screen and (min-width: 769px) {
+    h1 {
+        font-size: 48px;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .box {
+        width: 100%;
+        margin-bottom: 0;
+    }
+}
+/* Añade estos estilos al final de tu archivo CSS */
+
+.gallery-section {
+    background-color: #333;
+    color: #ddd;
+    padding: 30px;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+.gallery a {
+    display: block;
+    margin: 10px;
+    flex: 1 0 200px;
+    overflow: hidden;
+    border: 2px solid #555;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.gallery a:hover {
+    transform: scale(1.1);
+}
